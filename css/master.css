@@ -27,14 +27,33 @@ ul {
     list-style: none;
     padding: 0;
 }
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
 .page {
     background-color: #f1f5f9;
     min-height: 100vh;
 }
 /* Start Sidebar */
 .sidebar {
-    width: 250px;
-    box-shadow: 0 0 10px #ddd;
+    width: 230px;
+    box-shadow: 0 0 2px #ddd;
+    position: fixed;
+    height: 100%;
+    top: 68px;
+    overflow: auto;
+}
+.sidebar::-webkit-scrollbar {
+    width: 0;
 }
 .sidebar > h3 {
     margin-bottom: 50px;
@@ -68,7 +87,8 @@ ul {
     -o-border-radius: 50%;
 }
 .sidebar ul li a {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     transition: 0.3s;
     -webkit-transition: var(--main-transition);
     -moz-transition: 0.3s;
@@ -78,6 +98,7 @@ ul {
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
     background-color: #f6f6f6;
+    color: var(--blue-color);
 }
 @media (max-width: 767px) {
     .sidebar {
@@ -87,6 +108,7 @@ ul {
     .sidebar > h3 {
         font-size: 13px;
         margin-bottom: 15px;
+        display: none;
     }
     .sidebar > h3::before,
     .sidebar > h3::after {
@@ -95,6 +117,11 @@ ul {
 }
 /* End Sidebar */
 /* Start Content */
+.head {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 .head .search::before {
     font-family: var(--fa-style-family-classic);
     content: "\f002";
@@ -151,4 +178,200 @@ ul {
     height: 32px;
     margin-left: 15px;
 }
+.page h1 {
+    margin: 90px 260px 40px;
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    .page h1 {
+        margin: 90px 80px 40px;
+    }
+}
+.page h1::before,
+.page h1::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+}
+.page h1::before {
+    background-color: white;
+    width: 120px;
+}
+.page h1::after {
+    background-color: black;
+    width: 40px;
+}
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin-left: 250px;
+    margin-right: 20px;
+}
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 69px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
 /* End Content */
+/* Start Welcome widget */
+.welcome {
+    overflow: hidden;
+}
+.welcome .intro img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+.welcome .avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid white;
+    padding: 2px;
+    margin-left: 20px;
+    margin-top: -32px;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.welcome .body {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.welcome .body > div {
+    flex: 1;
+}
+.welcome .visit {
+    margin: 0 15px 15px auto;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.welcome .visit:hover {
+    background-color: var(--blue-alt-color);
+}
+@media (max-width: 767px) {
+    .welcome .intro {
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+    .welcome .avatar {
+        margin-left: 0;
+    }
+    .welcome .body > div:not(:first-child) {
+        margin-top: 20px;
+    }
+    .welcome .body > div span {
+        margin-top: 5px;
+    }
+}
+/* End Welcome widget */
+/* Start Quick Draft Widget */
+.quick-draft textarea {
+    resize: none;
+    min-height: 135px;
+}
+.quick-draft .save {
+    margin-left: auto;
+    cursor: pointer;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.quick-draft .save:hover {
+    background-color: var(--blue-alt-color);
+}
+/* End Quick Draft Widget */
+/* Start Target */
+.target .target-row .icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.target .details {
+    flex: 1;
+}
+.target .details .progress {
+    height: 4px;
+}
+.target .details .progress > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.target .details .progress > span span {
+    position: absolute;
+    bottom: 16px;
+    right: -16px;
+    color: white;
+    padding: 2px 5px;
+    font-size: 13px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.target .details .progress > span span::after {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    bottom: -10px;
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+}
+.target .details .progress > .blue span::after {
+    border-top-color: var(--blue-color);
+}
+.target .details .progress > .orange span::after {
+    border-top-color: var(--orange-color);
+}
+.target .details .progress > .green span::after {
+    border-top-color: var(--green-color);
+}
+.blue .icon,
+.blue .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+.orange .icon,
+.orange .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+.green .icon,
+.green .progress {
+    background-color: rgb(34 197 94 / 20%);
+}
+@media (max-width: 767px) {
+    .target .details .progress > span span {
+        font-size: 9px;
+        right: -15px;
+    }
+}
+/* End Target */
+/* Start Tickets Widget */
+.tickets .box {
+    border: 1px solid #ccc;
+    width: calc(50% - 10px);
+}
+@media (max-width: 767px) {
+    .tickets .box {
+        width: 100%;
+    }
+}
+/* End Tickets Widget */
