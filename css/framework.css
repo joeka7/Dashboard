@@ -154,6 +154,9 @@
 .mb-10 {
     margin-bottom: 10px;
 }
+.mb-15 {
+    margin-bottom: 15px;
+}
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -174,6 +177,9 @@
 }
 .border-none {
     border: none;
+}
+.border-color-ccc {
+    border: 1px solid #ccc;
 }
 /* End Padding + Margin + Border */
 /* Start Position */
@@ -233,6 +239,9 @@
 }
 .w-fit {
     width: fit-content;
+}
+.h-full {
+    height: 100%;
 }
 /* End Width */
 /* Start Media */
