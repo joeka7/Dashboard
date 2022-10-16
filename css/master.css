@@ -795,11 +795,313 @@ ul {
     color: #ff0000;
 }
 /* End Social Info */
+/* Start Widgets Control */
+.widgets-control .control input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.widgets-control .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.widgets-control .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.widgets-control .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+.widgets-control .control label::after {
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: scale(0) rotate(360deg);
+    -webkit-transform: scale(0) rotate(360deg);
+    -moz-transform: scale(0) rotate(360deg);
+    -ms-transform: scale(0) rotate(360deg);
+    -o-transform: scale(0) rotate(360deg);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.widgets-control .control input[type="checkbox"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+/* End Widgets Control */
+/* Start Backup Manager */
+.backup-manager input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.backup-manager .date label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.backup-manager .date label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.backup-manager .date label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+.backup-manager .date input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+}
+.backup-manager .date input[type="radio"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.backup-manager .servers {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+@media (max-width: 767px) {
+    .backup-manager .servers {
+        flex-wrap: wrap;
+    }
+}
+.backup-manager .servers .server {
+    border: 2px solid #eee;
+    position: relative;
+}
+.backup-manager .servers .server label {
+    cursor: pointer;
+}
+.backup-manager .servers input[type="radio"]:checked + .server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+    box-shadow: 0 0 6px #ccc
+}
+/* End Backup Manager */
 
 
 
 /***** End Settings Page *****/
+/***** Start Profile Page *****/
 
+
+/* Start Overviwe */
+.profile-page {
+    margin-left: 230px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .profile-page .overviwe {
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .profile-page {
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.profile-page .avatar-box {
+    width: 300px;
+}
+@media (min-width: 768px) {
+    .profile-page .avatar-box {
+        border-right: 1px solid #eee;
+    }
+}
+.profile-page .avatar-box > img {
+    width: 120px;
+    height: 120px;
+}
+.profile-page .avatar-box .level {
+    height: 6px;
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+}
+.profile-page .avatar-box .level span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box {
+        justify-content: center;
+        text-align: center;
+    }
+}
+.profile-page .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+.profile-page .info-box .box > div {
+    min-width: 250px;
+    padding: 10px 0 0;
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box > div {
+        text-align: center;
+        font-size: 13px;
+    }
+}
+.profile-page .info-box .box h4 {
+    font-weight: normal;
+}
+.profile-page .info-box .toggle-switch {
+    height: 20px;
+}
+.profile-page .info-box .toggle-switch::before {
+    width: 14px;
+    height: 14px;
+    left: 4px;
+    top: 3px;
+    font-size: 10px;
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .toggle-switch {
+        margin: 5px auto 0;
+    }
+}
+.profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {
+    width: 14px;
+    height: 14px;
+    left: 60px;
+    top: 3px;
+    font-size: 10px;
+}
+/* End Overviwe */
+/* Start Other Data */
+@media (max-width: 767px) {
+    .profile-page .other-data {
+        flex-direction: column;
+    }
+}
+.profile-page .skills-card {
+    flex-grow: 1;
+}
+.profile-page .skills-card ul li {
+    padding: 15px 0;
+}
+.profile-page .skills-card ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.profile-page .skills-card ul li span {
+    display: inline-flex;
+    padding: 4px 10px;
+    background-color: #eee;
+    font-size: 14px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.profile-page .skills-card ul li span:not(:last-child) {
+    margin-right: 5px;
+}
+.profile-page .activities {
+    flex-grow: 3;
+}
+/* End Other Data */
+
+
+/***** End Profile Page *****/
 
 
 /* Start Animation */
