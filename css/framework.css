@@ -100,6 +100,9 @@
 .p-20 {
     padding: 20px;
 }
+.pt-10 {
+    padding-top: 10px;
+}
 .pt-15 {
     padding-top: 15px;
 }
@@ -184,10 +187,16 @@
 .border-color-ccc {
     border: 1px solid #ccc;
 }
+.border-color-eee {
+    border: 1px solid #eee;
+}
 /* End Padding + Margin + Border */
 /* Start Position */
 .p-relative {
     position: relative;
+}
+.p-absolute {
+    position: absolute;
 }
 /* End Position */
 /* Start Font */
@@ -240,11 +249,17 @@
 .w-full {
     width: 100%;
 }
+.w-100px {
+    width: 100px;
+}
 .w-fit {
     width: fit-content;
 }
 .h-full {
     height: 100%;
+}
+.h-100px {
+    height: 100px;
 }
 /* End Width */
 /* Start Media */
