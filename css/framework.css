@@ -115,7 +115,7 @@
 .pb-15 {
     padding-bottom: 15px;
 }
-.pd-20 {
+.pb-20 {
     padding-bottom: 20px;
 }
 .ps-30 {
@@ -272,6 +272,11 @@
     }
     .d-block-sm {
         display: block;
+    }
+}
+@media (max-width: 991px) {
+    .d-none-md {
+        display: none;
     }
 }
 /* End Media */
