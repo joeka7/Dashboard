@@ -448,6 +448,11 @@ ul {
     left: 13px;
     bottom: -9px;
 }
+@media (max-width: 767px) {
+    .targets .target-row .details .progress > span span::after {
+        left: 10px;
+    }
+}
 .targets .target-row .details .progress > .blue span::after {
     border-top-color: var(--blue-color);
 }
