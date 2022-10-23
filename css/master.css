@@ -44,6 +44,69 @@ ul {
     background-color: #f1f5f9;
     min-height: 100vh;
 }
+/* Start Componants */
+.toggle-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
+.toggle-switch {
+    position: relative;
+    background-color: var(--grey-alt-color);
+    width: 78px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.toggle-switch:hover {
+    background-color: rgb(187, 187, 187);
+}
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    position: absolute;
+    font-weight: 900;
+    background-color: white;
+    color: #aaa;
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch:hover {
+    background-color: var(--blue-alt-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    color: var(--blue-color);
+    left: 50px;
+}
+/* End Componants */
 /* Start Sidebar */
 .sidebar {
     width: 210px;
@@ -184,7 +247,7 @@ ul {
     content: "";
     position: absolute;
     left: 12px;
-    bottom: 20px;
+    bottom: 19px;
     width: 9px;
     height: 9px;
     background-color: var(--red-color);
@@ -663,6 +726,172 @@ ul {
 /* End Projects */
 
 /* End Dashboard Page */
+
+/* Start Profile Page */
+
+/* Start Overviwe */
+.profile-page {
+    margin-left: 230px;
+}
+@media (max-width: 991px) {
+    .profile-page {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .profile-page .overviwe {
+        flex-direction: column;
+    }
+}
+.profile-page .overviwe .avatar-box {
+    width: 300px;
+}
+@media (min-width: 767px) {
+    .profile-page .overviwe .avatar-box {
+        border-right: 1px solid var(--color);
+    }
+}
+.profile-page .overviwe .avatar-box img {
+    width: 120px;
+    height: 120px;
+}
+.profile-page .overviwe .avatar-box .level {
+    height: 6px;
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+}
+.profile-page .overviwe .avatar-box .level span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box {
+        display: flex;
+        justify-content: center;
+    }  
+}
+.profile-page .info-box .box:not(:last-child) {
+    border-bottom: 1px solid var(--color);
+}
+.profile-page .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+.profile-page .info-box .box h4 {
+    font-weight: normal;
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box h4 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.profile-page .info-box .box > div:not(:last-child) {
+    width: 250px;
+    padding: 10px 0 0;
+}
+.profile-page .info-box .box > div:last-child {
+    margin-top: 15px;
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box > div {
+        display: flex;
+        justify-content: center;
+    }  
+}
+@media (max-width: 767px) {
+    .profile-page .info-box .box > div:last-child {
+        margin: 10px 100px;
+    }
+}
+.profile-page .info-box .box .toggle-switch {
+    height: 20px;
+    font-size: 10px;
+}
+.profile-page .info-box .box .toggle-switch::before {
+    width: 14px;
+    height: 14px;
+    top: 3px;
+}
+.profile-page .info-box .box .toggle-checkbox:checked + .toggle-switch::before {
+    left: 59px;
+}
+/* End Overviwe */
+/* Start Other Data */
+@media (max-width: 767px) {
+    .other-data {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* End Other Data */
+/* Start My Skills */
+.profile-page .my-skills {
+    flex-grow: 1;
+}
+.profile-page .my-skills ul li:not(:last-child) {
+    border-bottom: 1px solid var(--color);
+}
+.profile-page .my-skills ul li span {
+    display: inline-flex;
+    padding: 4px 10px;
+}
+/* End My Skills */
+/* Start Latest Activities */
+.profile-page .activities {
+    flex-grow: 3;
+}
+.profile-page .activities .activity:not(:last-child) {
+    border-bottom: 1px solid var(--color);
+}
+.profile-page .activities .activity img {
+    width: 64px;
+    height: 64px;
+}
+.profile-page .activities .activity .info {
+    flex: 1;
+}
+@media (max-width: 767px) {
+    .profile-page .activities .activity .info span:nth-child(2) {
+        font-size: 13px;   
+    }
+}
+@media (min-width: 768px) {
+    .profile-page .activities .activity .date {
+        text-align: right;
+    }
+}
+@media (max-width: 767px) {
+    .profile-page .activities .activity .date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+/* End Latest Activities */
+
+/* End Profile Page */
+
 /* Start Animation */
 @keyframes change-color {
     from {

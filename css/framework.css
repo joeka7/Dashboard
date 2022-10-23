@@ -166,14 +166,23 @@
 .mb-20 {
     margin-bottom: 20px;
 }
+.ms-0 {
+    margin-left: 0;
+}
+.ms-5 {
+    margin-left: 5px;
+}
 .ms-10 {
     margin-left: 10px;
 }
 .ms-15 {
     margin-left: 15px;
 }
-.ms-5 {
-    margin-left: 5px;
+.me-0 {
+    margin-right: 0;
+}
+.me-5 {
+    margin-right: 5px;
 }
 .me-10 {
     margin-right: 10px;
