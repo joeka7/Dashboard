@@ -897,6 +897,49 @@ ul {
 
 /* End Profile Page */
 
+/* Start Friends Page */
+.friends-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-left: 230px;
+}
+.friends-page .box .contact {
+    left: 10px;
+    top: 10px;
+}
+.friends-page .box .contact i {
+    color: #666;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.friends-page .box .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.friends-page .box .icons {
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+.friends-page .box .icons i {
+    margin-right: 5px;
+}
+.friends-page .box .icons .vip {
+    font-size: 40px;
+    font-weight: bold;
+    right: 15px;
+    top: 50%;
+    color: var(--orange-color);
+    opacity: 0.3;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+/* End Friends Page */
+
 /* Start Animation */
 @keyframes change-color {
     from {
