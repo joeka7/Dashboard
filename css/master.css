@@ -902,7 +902,7 @@ ul {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-left: 230px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .friends-page {
         grid-template-columns: minmax(100px, 1fr);
         margin-left: 10px;
@@ -988,7 +988,7 @@ ul {
     left: 100px;
 }
 .projects-page .box .team a:hover {
-    z-index: 1000;
+    z-index: 1;
 }
 .projects-page .box .team img {
     width: 40px;
@@ -998,6 +998,11 @@ ul {
 .projects-page .box .do {
     justify-content: flex-end;
     border-top: 1px solid var(--color);
+}
+@media (max-width: 767px) {
+    .projects-page .box .do {
+        justify-content: center;
+    }
 }
 .projects-page .box .do span {
     margin-left: 5px;
