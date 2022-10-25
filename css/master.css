@@ -1071,6 +1071,196 @@ ul {
 }
 /* End Courses Page */
 
+/* Start Settings Page */
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-left: 230px;
+}
+@media (max-width: 991px) {
+    .settings-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+/* Start Site Control */
+.settings-page .site-control textarea {
+    resize: none;
+    height: 150px;
+}
+.settings-page .site-control textarea::placeholder {
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .site-control textarea:focus::placeholder {
+    opacity: 0;
+}
+/* End Site Control */
+/* Start General Info */
+.settings-page .general-info .email {
+    display: inline-flex;
+    width: calc( 100% - 80px);
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+.settings-page .general-info input::placeholder {
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .general-info input:focus::placeholder {
+    opacity: 0;
+}
+/* End General Info */
+/* Start Security Info */
+.settings-page .security-info .box:not(:last-child) {
+    border-bottom: 1px solid var(--color);
+}
+.settings-page .security-info .box:first-of-type a {
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .security-info .box:first-of-type a:hover {
+    background-color: var(--blue-alt-color);
+}
+/* End Security Info */
+.settings-page .security-info .box:last-of-type a {
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .security-info .box:last-of-type a:hover {
+    background-color: rgb(214, 214, 214);
+}
+/* End Security Info */
+/* Start Social Info */
+.settings-page .social-info i {
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+    -ms-border-radius: 6px 0 0 6px;
+    -o-border-radius: 6px 0 0 6px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .social-info input {
+    height: 40px;
+    padding-left: 10px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -ms-border-radius: 0 6px 6px 0;
+    -o-border-radius: 0 6px 6px 0;
+}
+.settings-page .social-info > div:focus-within .twitter {
+    color: #1da1f2;
+}
+.settings-page .social-info > div:focus-within .facebook {
+    color: #1877f2;
+}
+.settings-page .social-info > div:focus-within .linkedin {
+    color: #0077b5;
+}
+.settings-page .social-info > div:focus-within .youtube {
+    color: #ff0000;
+}
+/* End Social Info */
+/* Start Widgets Control */
+.settings-page .widgets-control .control input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.settings-page .widgets-control .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 15px;
+    border: 2px solid var(--grey-color);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .widgets-control .control label:hover::before {
+    border-color: var(--blue-color);
+}
+.settings-page .widgets-control .control label::after {
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    position: absolute;
+    font-weight: 900;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--blue-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: scale(0) rotate(360deg);
+    -webkit-transform: scale(0) rotate(360deg);
+    -moz-transform: scale(0) rotate(360deg);
+    -ms-transform: scale(0) rotate(360deg);
+    -o-transform: scale(0) rotate(360deg);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.settings-page .widgets-control .control input[type="checkbox"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+/* End Widgets Control */
+
+/* End Settings Page */
+
 /* Start Animation */
 @keyframes change-color {
     from {
