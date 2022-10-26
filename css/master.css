@@ -1418,6 +1418,63 @@ ul {
 
 /* End Files Page */
 
+/* Start Plans Page */
+.plans-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-left: 230px;
+}
+@media (max-width: 991px) {
+    .plans-page {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+    } 
+}
+.plans-page .plan .top {
+    border: 3px solid white;
+    outline: 3px solid transparent;
+}
+.plans-page .green .top {
+    outline-color: var(--green-color);
+}
+.plans-page .blue .top {
+    outline-color: var(--blue-color);
+}
+.plans-page .orange .top {
+    outline-color: var(--orange-color);
+}
+.plans-page .plan .top .price span {
+    left: -20px;
+    top: 0;
+}
+.plans-page .plan ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.plans-page .plan ul li .yes {
+    color: var(--green-color);
+}
+.plans-page .plan ul li .help {
+    color: var(--grey-color);
+    margin-left: auto;
+}
+.plans-page .plan ul li i:not(.yes, .help) {
+    color: var(--red-color);
+}
+.plans-page .plan ul li i:first-child {
+    font-size: 18px;
+    margin-right: 5px;
+}
+@media (max-width: 991px) {
+    .plans-page .plan a {
+        margin: auto;
+    }
+}
+/* End Plans Page */
+
 /* Start Animation */
 @keyframes change-color {
     from {

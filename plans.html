@@ -14,60 +14,62 @@
 </head>
 <body>
     <div class="page d-flex">
+        <!-- Start Sidebar -->
         <div class="sidebar bg-white p-20 p-relative">
-            <h3 class="p-relative text-center mt-0">Joeka</h3>
+            <h3 class="p-relative text-center mt-0 d-none-sm">SCOGLIO</h3>
             <ul>
                 <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="index.html">
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="index.html">
                         <i class="fa-solid fa-chart-simple fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Dashboard</span>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="settings.html">
-                        <i class="fa-solid fa-gear fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="profile.html">
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="profile.html">
                         <i class="fa-solid fa-user fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Profile</span>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="projects.html">
-                        <i class="fa-solid fa-diagram-project fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Projects</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="courses.html">
-                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Courses</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="friends.html">
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="friends.html">
                         <i class="fa-solid fa-users fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Friends</span>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Friends</span>
                     </a>
                 </li>
                 <li>
-                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 " href="files.html">
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="projects.html">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="courses.html">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="settings.html">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="files.html">
                         <i class="fa-solid fa-file fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Files</span>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Files</span>
                     </a>
                 </li>
                 <li>
-                    <a class="active d-flex align-items-center fs-14 c-black rad-6 p-10 " href="plans.html">
+                    <a class="active d-flex align-items-center fs-14 c-black rad-6 p-10 mb-20 mt-20" href="plans.html">
                         <i class="fa-solid fa-credit-card fa-fw"></i>
-                        <span class="fs-14 ms-10 d-none-sm">Plans</span>
+                        <span class="fs-14 ms-10 d-none-sm d-none-md">Plans</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="content w-full overflow-hidden">
+            <!-- End Sidebar -->
             <!-- Start Head -->
             <div class="head bg-white p-15 d-flex align-items-center justify-content-between">
                 <div class="search p-relative">
@@ -77,177 +79,184 @@
                     <span class="notification p-relative curser-pointer">
                         <i class="fa-regular fa-bell fa-lg"></i>
                     </span>
-                    <img class="curser-pointer" src="images/avatar.png" alt="">
+                    <a href="profile.html"><img class="curser-pointer ms-15" src="images/avatar.png" alt=""></a>
                 </div>
             </div>
             <!-- End Head -->
             <!-- Start Plans Page -->
             <h1 class="p-relative">Plans</h1>
-            <div class="plans-page d-grid m-20 gap-20">
-                <!-- Start Plan -->
+            <div class="plans-page d-grid gap-20 m-20">
                 <div class="plan green bg-white p-20">
                     <div class="top bg-green text-center p-20">
-                        <h2 class="m-0 c-white">Free</h2>
-                        <div class="price c-white"><span>$</span>0.00</div>
+                        <h2 class="c-white m-0">Free</h2>
+                        <div class="price c-white p-relative fs-40 fw-bold w-fit m-auto">
+                            <span class="p-absolute fs-25">$</span>
+                            0.00
+                        </div>
                     </div>
                     <ul>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Text Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Videos Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Appear On Leaderboard</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Browse Content Without Ads</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access All Assignments</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Get Daily Prizes</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Earn Certificate</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>1 GB Space For Hosting Files</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access Badge System</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                     </ul>
                     <a class="btn-shape bg-green c-white d-block w-fit" href="#">Join</a>
                 </div>
                 <div class="plan blue bg-white p-20">
                     <div class="top bg-blue text-center p-20">
-                        <h2 class="m-0 c-white">Basic</h2>
-                        <div class="price c-white"><span>$</span>7.99</div>
+                        <h2 class="c-white m-0">Basic</h2>
+                        <div class="price c-white p-relative fs-40 fw-bold w-fit m-auto">
+                            <span class="p-absolute fs-25">$</span>
+                            7.99
+                        </div>
                     </div>
                     <ul>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Text Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Videos Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Appear On Leaderboard</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Browse Content Without Ads</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access All Assignments</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Get Daily Prizes</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Earn Certificate</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>1 GB Space For Hosting Files</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access Badge System</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                     </ul>
                     <a class="btn-shape bg-blue c-white d-block w-fit" href="#">Join</a>
                 </div>
                 <div class="plan orange bg-white p-20">
                     <div class="top bg-orange text-center p-20">
-                        <h2 class="m-0 c-white">Premium</h2>
-                        <div class="price c-white"><span>$</span>19.99</div>
+                        <h2 class="c-white m-0">Premium</h2>
+                        <div class="price c-white p-relative fs-40 fw-bold w-fit m-auto">
+                            <span class="p-absolute fs-25">$</span>
+                            19.99
+                        </div>
                     </div>
                     <ul>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Text Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Access All Videos Lessons</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-check fa-fw yes"></i>
                             <span>Appear On Leaderboard</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Browse Content Without Ads</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access All Assignments</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Get Daily Prizes</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Earn Certificate</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>1 GB Space For Hosting Files</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                         <li>
                             <i class="fa-solid fa-xmark fa-fw"></i>
                             <span>Access Badge System</span>
-                            <i class="fa-solid fa-circle-info help"></i>
+                            <i class="fa-solid fa-circle-info curser-pointer help"></i>
                         </li>
                     </ul>
                     <p class="c-grey m-0 text-center">This Is Your Current Plan</p>
                 </div>
-                <!-- End Plan -->
             </div>
             <!-- End Plans Page -->
         </div>
