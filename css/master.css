@@ -1258,6 +1258,81 @@ ul {
     -o-transform: scale(1);
 }
 /* End Widgets Control */
+/* Start Backup Manager */
+.settings-page .backup-manager input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.settings-page .backup-manager .date label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.settings-page .backup-manager .date label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+.settings-page .backup-manager .date input[type="radio"]:checked + label::before  {
+    border-color: var(--blue-color);
+}
+.settings-page .backup-manager .date input[type="radio"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.settings-page .backup-manager .servers {
+    border-top: 1px solid var(--color);
+}
+@media (max-width: 767px) {
+    .settings-page .backup-manager .servers {
+        flex-wrap: wrap;
+    }
+}
+.settings-page .backup-manager .servers .server {
+    border: 2px solid var(--color);
+}
+.settings-page .backup-manager .servers input[type="radio"]:checked + .server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+    box-shadow: 0 0 6px #ccc;
+}
+/* End Backup Manager */
 
 /* End Settings Page */
 
